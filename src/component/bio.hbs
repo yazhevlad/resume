@@ -1,0 +1,22 @@
+<div>
+    <em>"{{title}}",</em>
+    {{year}}
+</div>
+
+{{#if publisher}}
+<div>Publisher: {{publisher}}</div>
+{{else}}
+{{/if}}
+
+{{#if description}}
+<div>
+    <p><em>{{description}}</em></p>
+</div>
+{{else}}
+{{/if}}
+
+{{#if field}}
+<div>Field: {{field}}</div>
+{{else}}
+{{/if}}
+<br>
