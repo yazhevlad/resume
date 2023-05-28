@@ -1,0 +1,23 @@
+<div>{{name}}</div>
+
+<div>
+    <em>{{description}}</em>
+</div>
+
+{{#if status}}
+<div>{{status}}</div>
+{{else}}
+{{/if}}
+
+{{#if technologies}}
+<div>Technologies:</div>
+
+<div>
+    <ul>
+        {{#each technologies}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+</div>
+{{else}}
+{{/if}}
