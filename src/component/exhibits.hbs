@@ -1,0 +1,31 @@
+<div>
+    <div>Exhibits:</div>
+    <br>
+    <ul>
+        {{#each exhibits}}
+        <li>
+            <div>
+                <em>"{{name}}",</em>
+                {{#if artist}}
+                {{artist}}
+                {{else}}
+                Unknown artist
+                {{/if}}
+            </div>
+
+            <div>
+                <p><em>{{description}}</em></p>
+            </div>
+
+            <div>
+                {{#if audio_guide includeZero=true}}
+                (<b>Audio guide is avaliable</b>)
+                {{else}}
+                (<b>Audio guide is not avaliable</b>)
+                {{/if}}
+            </div>
+            <br>
+        </li>
+        {{/each}}
+    </ul>
+</div>
