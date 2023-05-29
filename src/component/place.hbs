@@ -1,0 +1,25 @@
+<div>
+    <ul>
+        {{#with data}}
+        <li>
+            <div>Location:</div>
+            <br>
+            <div>
+                "{{name}}"
+            </div>
+            {{#with location}}
+            <div>
+                <em>{{address}}, {{city}}, {{country}}</em>
+            </div>
+            {{/with}}
+        </li>
+
+        {{#if exhibits}}
+        <br>
+        <li>{{> exhibits}}</li>
+        {{else}}
+        {{/if}}
+
+        {{/with}}
+    </ul>
+</div>
