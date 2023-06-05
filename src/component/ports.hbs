@@ -1,0 +1,29 @@
+<div class="card text-bg-secondary mb-3" style="max-width: 20rem;">
+    <div class="card-header">
+        <b>Ports</b>
+    </div>
+    <div class="card-body">
+        <div class="card-text">
+            <ol>
+                {{#each ports}}
+                <li>
+                    {{type}}
+                    <br>
+                    Ports: {{count}}
+
+                    {{#if features}}
+                    <div>Features:</div>
+                    <ul>
+                        {{#each features}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{else}}
+                    {{/if}}
+                    <br>
+                </li>
+                {{/each}}
+            </ol>
+        </div>
+    </div>
+</div>
