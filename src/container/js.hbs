@@ -1,0 +1,150 @@
+<div>
+    <main>
+        <section>
+            {{> title data=name big=true}}
+            <div>
+                <em>{{description}}</em>
+            </div>
+            <br>
+            <div>
+                Created in {{history.year}}
+            </div>
+            <br>
+            <div>
+                Founder: {{history.founder}}
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Types:</div>
+            <br>
+            <ul>
+                {{#each types}}
+                <li>
+                    <span class="badge text-bg-success">{{this}}</span>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Syntax:</div>
+            <br>
+            {{#with syntax}}
+            <ol>
+                <li>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Variables
+                        </a>
+                    </p>
+                    {{> syntax data=variables}}
+                </li>
+
+                <br>
+
+                <li>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Functions
+                        </a>
+                    </p>
+                    {{> syntax data=functions}}
+                </li>
+
+                <br>
+
+                <li>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Conditionals
+                        </a>
+                    </p>
+                    {{> syntax data=conditionals}}
+                </li>
+
+                <br>
+
+                <li>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Loops
+                        </a>
+                    </p>
+                    {{> syntax data=loops}}
+                </li>
+
+                <br>
+
+                <li>
+                    <p>
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
+                            aria-expanded="false" aria-controls="collapseExample">
+                            Classes
+                        </a>
+                    </p>
+                    {{> syntax data=classes}}
+                </li>
+            </ol>
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Features:</div>
+            <br>
+            <ul class="list-group">
+                {{#each features}}
+                <li href="#" class="list-group-item list-group-item-action">{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Libraries:</div>
+            <br>
+            <ul class="list-group list-group-horizontal">
+                {{#each libraries}}
+                <li class="list-group-item">{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Tools:</div>
+            <br>
+            <ul class="list-group list-group-horizontal">
+                {{#each tools}}
+                <li class="list-group-item list-group-item-primary">{{this}}</li>
+                {{/each}}
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            <div>Community:</div>
+            <br>
+            <ul class="nav flex-column">
+                {{#each community}}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" target="_blank">{{name}} - {{type}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+</div>
