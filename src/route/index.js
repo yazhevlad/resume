@@ -701,8 +701,6 @@ router.get('/web', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -788,6 +786,13 @@ router.get('/js', function (req, res) {
 })
 
 // ================================================================
+
+router.get('/bootstrap', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('bootstrap', {
+    layout: 'bootstrap',
+  })
+})
 
 // Підключаємо роутер до бек-енду
 module.exports = router
