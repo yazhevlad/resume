@@ -1,0 +1,366 @@
+<div>
+    <main>
+        <section>
+            {{> title data="Car" big=true}}
+            <br>
+            <div>
+                <strong>{{make}} {{model}}</strong>
+                <br>
+                Year: {{year}}
+                <br>
+                Color:
+                <span class="badge rounded-pill text-bg-secondary">{{color}}</span>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Features"}}
+            <br>
+            <ul>
+                {{#with features}}
+                <li>
+                    <div><b>Interior:</b></div>
+                    <br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item" style="width: 300px;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Seats:
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#with interior.seats}}
+                                        <li>Material: {{material}}</li>
+                                        <br>
+                                        <li>Color: {{color}}</li>
+                                        <br>
+                                        <li>
+                                            Heated:
+                                            {{> functions data=heated}}
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Ventilated:
+                                            {{> functions data=ventilated}}
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion-item" style="width: 300px;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Dashboard:
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#with interior.dashboard}}
+                                        <li>Material: {{material}}</li>
+                                        <br>
+                                        <li>Color: {{color}}</li>
+                                        <br>
+                                        <li>
+                                            Display:
+                                            <br>
+                                            <ul>
+                                                {{#with display}}
+                                                <li>
+                                                    Type: {{type}}
+                                                </li>
+                                                <li>
+                                                    Size: {{size}}
+                                                </li>
+                                                <li>
+                                                    Resolution: {{resolution}}
+                                                </li>
+                                                <li>
+                                                    Touchscreen:
+                                                    {{> functions data=touchscreen}}
+                                                </li>
+                                                {{/with}}
+                                            </ul>
+                                        </li>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion-item" style="width: 300px;">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Audio:
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#with interior.audio}}
+                                        <li>
+                                            System: {{system}}
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Speakers: {{speakers}}
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Subwoofer:
+                                            {{> functions data=subwoofer}}
+                                        </li>
+                                        <br>
+                                        <li>
+                                            Bluetooth:
+                                            {{> functions data=bluetooth}}
+                                        </li>
+                                        <br>
+                                        <li>
+                                            USB:
+                                            {{> functions data=USB}}
+                                        </li>
+                                        <br>
+                                        {{/with}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <br>
+
+                <li>
+                    <div><b>Exterior:</b></div>
+                    <br>
+                    <button type="button" class="btn btn-warning">Wheels:</button>
+                    <br>
+                    <br>
+                    <ul>
+                        {{#with exterior.wheels}}
+                        <li>Size: {{size}}</li>
+                        <br>
+                        <li>Type: {{type}}</li>
+                        <br>
+                        <li>Color: {{color}}</li>
+                        <br>
+                        {{/with}}
+                    </ul>
+
+                    <br>
+
+                    <button type="button" class="btn btn-info">Headlights:</button>
+                    <br>
+                    <br>
+                    <ul>
+                        {{#with exterior.headlights}}
+                        <li>Type: {{type}}</li>
+                        <br>
+                        <li>Brightness: {{brightness}}</li>
+                        <br>
+                        <li>
+                            Automatic:
+                            {{> functions data=automatic}}
+                        </li>
+                        <br>
+                        {{/with}}
+                    </ul>
+
+                    <br>
+
+                    <button type="button" class="btn btn-success">Sunroof:</button>
+                    <br>
+                    <br>
+                    <ul>
+                        {{#with exterior.sunroof}}
+                        <li>Type: {{type}}</li>
+                        <br>
+                        <li>Size: {{size}}</li>
+                        <br>
+                        <li>
+                            Automatic:
+                            {{> functions data=automatic}}
+                        </li>
+                        <br>
+                        {{/with}}
+                    </ul>
+                </li>
+
+                <br>
+
+                <li>
+                    <div><b>Safety:</b></div>
+                    <br>
+                    <div>Airbags:</div>
+                    <br>
+                    <ul class="list-group list-group-horizontal" style="width: 500px;">
+                        {{#with safety.airbags}}
+                        <li class="list-group-item">Front: {{front}}</li>
+                        <li class="list-group-item">Side: {{side}}</li>
+                        <li class="list-group-item">Knee: {{knee}}</li>
+                        <li class="list-group-item">Rear: {{rear}}</li>
+                        {{/with}}
+                    </ul>
+
+                    <br>
+
+                    <div>Assistance:</div>
+                    <br>
+                    <ol class="list-group list-group-numbered" style="width: 330px;">
+                        {{#with safety.assistance}}
+                        <li class="list-group-item">
+                            Blind spot monitoring:
+                            {{> functions data=blind_spot_monitoring}}
+                        </li>
+                        <li class="list-group-item">
+                            Rear cross traffic alert:
+                            {{> functions data=rear_cross_traffic_alert}}
+                        </li>
+                        <li class="list-group-item">
+                            Lane departure warning:
+                            {{> functions data=lane_departure_warning}}
+                        </li>
+                        <li class="list-group-item">
+                            Adaptive cruise control:
+                            {{> functions data=adaptive_cruise_control}}
+                        </li>
+                        <li class="list-group-item">
+                            Collision warning:
+                            {{> functions data=collision_warning}}
+                        </li>
+                        {{/with}}
+                    </ol>
+                </li>
+            </ul>
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Engine"}}
+            <br>
+            <div>
+                <ul>
+                    {{#with engine}}
+                    <li>
+                        Type:
+                        <span class="badge rounded-pill text-bg-warning">{{type}}</span>
+                    </li>
+                    <br>
+                    <li>
+                        Displacement: {{displacement}}
+                    </li>
+                    <br>
+                    <li>
+                        Horsepower: {{horsepower}}
+                    </li>
+                    <br>
+                    <li>
+                        Torque: {{torque}}
+                    </li>
+                    <br>
+                    <li>
+                        Transmission:
+                        <br>
+                        <br>
+                        <ul>
+                            {{#with transmission}}
+                            <li>
+                                <span class="badge rounded-pill text-bg-info">{{type}}</span>
+                            </li>
+                            <li>
+                                {{gears}} gears
+                            </li>
+                            {{/with}}
+                        </ul>
+                    </li>
+                    {{/with}}
+                </ul>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Fuel economy"}}
+            <br>
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item" style="width: 100px;">City</li>
+                <li class="list-group-item" style="width: 100px;">Highway</li>
+                <li class="list-group-item" style="width: 100px;">Combined</li>
+            </ul>
+            <ul class="list-group list-group-horizontal-sm">
+                {{#with fuel_economy}}
+                <li class="list-group-item" style="width: 100px;">{{city}} litres</li>
+                <li class="list-group-item" style="width: 100px;">{{highway}} litres</li>
+                <li class="list-group-item" style="width: 100px;">{{combined}} litres</li>
+                {{/with}}
+            </ul>
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Price"}}
+            <br>
+            <ul>
+                {{#with price}}
+                <li>Base: ${{base}}</li>
+                <br>
+                <li>Destination: ${{destination}}</li>
+                <br>
+                <li>
+                    Options:
+                    <br>
+                    <br>
+                    <ol>
+                        {{#with options}}
+                        <li>Navigation: ${{navigation}}</li>
+                        <br>
+                        <li>Moonroof: ${{moonroof}}</li>
+                        <br>
+                        <li>Premium paint: ${{premium_paint}}</li>
+                        {{/with}}
+                    </ol>
+                </li>
+                <br>
+                <li>
+                    <p>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseWidthExample" aria-expanded="false"
+                            aria-controls="collapseWidthExample">
+                            Total price
+                        </button>
+                    </p>
+                    <div style="min-height: 120px;">
+                        <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                            <div class="card card-body" style="width: 300px;">
+                                ${{total}}
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/with}}
+            </ul>
+        </section>
+    </main>
+</div>

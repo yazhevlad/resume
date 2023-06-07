@@ -1,0 +1,218 @@
+<div>
+    <main>
+        <section>
+            {{> title data=name big=true}}
+            <br>
+            <div>
+                <p>
+                    <em>{{description}}</em>
+                </p>
+            </div>
+            <br>
+            <div>
+                Price: ${{price}}
+            </div>
+            <br>
+            <div>
+                Category: {{category}}
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Features"}}
+            <br>
+            {{#with features}}
+            <ul>
+                {{#with processor}}
+                <li>
+                    <div class="card text-bg-info mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Processor</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{brand}} {{model}}</li>
+                                    <li>{{speed}}</li>
+                                    <li>{{cores}} cores</li>
+                                    <li>{{cache}} cache</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/with}}
+
+                <br>
+
+
+                <li>
+                    <div class="card text-bg-dark mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Memory & Storage</b>
+                        </div>
+                        <div class="card-body">
+                            <b class="card-title">Memory:</b>
+                            <div class="card-text">
+                                <ul>
+                                    {{#with memory}}
+                                    <li>{{type}}</li>
+                                    <li>{{size}}</li>
+                                    <li>{{speed}}</li>
+                                    {{/with}}
+                                </ul>
+                            </div>
+                            <br>
+                            <b class="card-title">Storage:</b>
+                            <div class="card-text">
+                                <ul>
+                                    {{#with storage}}
+                                    <li>{{type}}</li>
+                                    <li>{{size}}</li>
+                                    {{/with}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <br>
+
+                {{#with display}}
+                <li>
+                    <div class="card text-bg-success mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Display</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{size}}</li>
+                                    <li>{{resolution}}</li>
+                                    <li>{{technology}} technology</li>
+                                    <li>{{color_space}} color space</li>
+                                    <li> brightness {{brightness}}</li>
+                                    <li>{{refresh_rate}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/with}}
+
+                <br>
+
+                {{#with graphics}}
+                <li>
+                    <div class="card text-bg-warning mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Graphics</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{brand}} {{model}}</li>
+                                    <li>{{memory}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/with}}
+
+                <br>
+
+                <li>
+                    {{> ports}}
+                </li>
+
+                <br>
+
+                {{#with battery}}
+                <li>
+                    <div class="card text-bg-danger mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Battery</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{type}}</li>
+                                    <li>capacity {{capacity}}</li>
+                                    <li>{{life}} without charging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                {{/with}}
+
+                <br>
+
+                <li>
+                    <div class="card text-bg-primary mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Weight & Dimensions</b>
+                        </div>
+                        <div class="card-body">
+                            <b class="card-title">Weight:</b>
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{weight}}</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <b class="card-title">Dimensions:</b>
+                            <div class="card-text">
+                                <ul>
+                                    {{#with dimensions}}
+                                    <li>Height: {{height}}</li>
+                                    <li>Width: {{width}}</li>
+                                    <li>Depth: {{depth}}</li>
+                                    {{/with}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <br>
+
+                <li>
+                    <div class="card text-bg-light mb-3" style="max-width: 20rem;">
+                        <div class="card-header">
+                            <b>Operating system</b>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <ul>
+                                    <li>{{operating_system}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            {{/with}}
+        </section>
+
+        <hr>
+
+        <section>
+            {{> title data="Accessories"}}
+            <br>
+            <ul class="list-group list-group-flush">
+                {{#each features.accessories}}
+                <li class="list-group-item">
+                    {{name}} -
+                    <b>${{price}}</b> -
+                    <button type="button" class="btn btn-success">Buy</button>
+                </li>
+                <br>
+                {{/each}}
+            </ul>
+        </section>
+    </main>
+</div>

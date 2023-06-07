@@ -1,0 +1,185 @@
+<div>
+    <main>
+        <section>
+            {{> title data=name big=true}}
+            <br>
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{users.[0].name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">ID: {{users.[0].id}}</h6>
+                    <p class="card-text">
+                    <div>Gender: {{users.[0].gender}}</div>
+                    <div>Age: {{users.[0].age}}</div>
+                    </p>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Friends
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#each users.[0].friends}}
+                                        <li>
+                                            {{> perinfo}}
+                                            <div>
+                                                <b>Mutual friends:</b>
+                                            </div>
+                                            <ul>
+                                                {{#each mutual_friends}}
+                                                <li>
+                                                    {{> perinfo}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <br>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Groups
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+                                    <ol>
+                                        {{#each users.[0].groups}}
+                                        <li>
+                                            <div>"{{name}}"</div>
+                                            <div>ID: {{id}}</div>
+                                            <br>
+                                            <p>
+                                                <em>{{description}}</em>
+                                            </p>
+                                            <div>
+                                                <b>Members:</b>
+                                            </div>
+                                            <ul>
+                                                {{#each members}}
+                                                <li>
+                                                    {{> perinfo}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <br>
+                                        </li>
+                                        {{/each}}
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br>
+        <hr>
+        <br>
+
+        <section>
+            <div class="card" style="width: 20rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{users.[1].name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">ID: {{users.[1].id}}</h6>
+                    <p class="card-text">
+                    <div>Gender: {{users.[1].gender}}</div>
+                    <div>Age: {{users.[1].age}}</div>
+                    </p>
+
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Friends
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <ul>
+                                        {{#each users.[1].friends}}
+                                        <li>
+                                            {{> perinfo}}
+                                            <div>
+                                                <b>Mutual friends:</b>
+                                            </div>
+                                            <ul>
+                                                {{#each mutual_friends}}
+                                                <li>
+                                                    {{> perinfo}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <br>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Groups
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    {{#each users.[1].friends}}
+                                    <ul>
+                                        {{#each groups}}
+                                        <li>
+                                            <div>"{{name}}"</div>
+                                            <div>ID: {{id}}</div>
+                                            <br>
+                                            <p>
+                                                <em>{{description}}</em>
+                                            </p>
+                                            <div>
+                                                <b>Members:</b>
+                                            </div>
+                                            <ul>
+                                                {{#each members}}
+                                                <li>
+                                                    {{> perinfo}}
+                                                </li>
+                                                {{/each}}
+                                            </ul>
+                                            <br>
+                                        </li>
+                                        {{/each}}
+                                    </ul>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
