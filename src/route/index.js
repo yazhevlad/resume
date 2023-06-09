@@ -1409,9 +1409,9 @@ router.get('/task31', function (req, res) {
       ],
     },
   })
-})        
-          
- router.get('/task22', function (req, res) {
+})
+
+router.get('/task22', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     page: {
@@ -1419,7 +1419,7 @@ router.get('/task31', function (req, res) {
     },
 
     layout: 'basic',
-    
+
     page_header: {
       title: 'InnovaMind',
       description: 'Welcome to our wonderful community',
