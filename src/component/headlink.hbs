@@ -1,0 +1,19 @@
+<section>
+    {{#with navigation}}
+    <div class="card">
+        <ul class="nav">
+            {{#each links}}
+            {{#if href includeZero=null}}
+            <li class="nav-item py-2">
+                <a class="nav-link" href="{{href}}">{{text}}</a>
+            </li>
+            {{else}}
+            <li class="nav-item py-2">
+                <a class="nav-link disabled" href="{{href}}">{{text}}</a>
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+    {{/with}}
+</section>
