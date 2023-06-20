@@ -2218,7 +2218,7 @@ router.get('/shopcart', function (req, res) {
     },
 
     layout: 'shop',
-
+		
     navigation: {
       links: [
         {
@@ -2239,7 +2239,7 @@ router.get('/shopcart', function (req, res) {
         },
       ],
     },
-
+		
     header: {
       title: 'Кошик',
       button: {
