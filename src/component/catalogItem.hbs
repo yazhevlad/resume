@@ -1,0 +1,61 @@
+{{#each data}}
+<div class="col-6 gx-2 mb-3">
+    <div class="card">
+        <img src="{{img}}" class="card-img-top" alt="{{name}}">
+        <div class="card-body">
+            <div>
+                {{#if isHot includeZero=true}}
+                <span class="badge rounded-pill text-bg-warning text-white mb-4">HOT!</span>
+                {{else}}
+                {{/if}}
+                {{#if isNew includeZero=true}}
+                <span class="badge rounded-pill text-bg-primary mb-4">Нове</span>
+                {{else}}
+                {{/if}}
+
+                {{#if isFast includeZero=true}}
+                <div>
+                    <span class="badge text-bg-success">Швидка доставка</span>
+                </div>
+                {{else}}
+                {{/if}}
+                {{#if isFree includeZero=true}}
+                <div>
+                    <span class="badge text-bg-secondary">Безкоштовна доставка</span>
+                </div>
+                {{else}}
+                {{/if}}
+            </div>
+
+            <div>
+                <h5 class="my-3">{{name}}</h5>
+                <div class="my-3 small">{{review.amount}} {{review.text}}</div>
+                <h4>{{price}}</h4>
+                <div class="my-3 small">{{delivery}}</div>
+                <div>
+                    {{#each buttons}}
+                    {{#if isPrimary includeZero=true}}
+                    <div class="mb-2">
+                        <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                    </div>
+                    {{else}}
+                    {{#if isSecondary includeZero=true}}
+                    <div class="mb-2">
+                        <a class="btn btn-secondary" href="{{link}}">{{text}}</a>
+                    </div>
+                    {{/if}}
+                    {{/if}}
+                    {{/each}}
+                </div>
+                <div class="mt-4">
+                    <ul class="ps-4">
+                        {{#each characteristics}}
+                        <li class="pb-2">{{title}}: {{value}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
