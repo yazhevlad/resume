@@ -1,0 +1,13 @@
+{{#with data}}
+<div class="card text-bg-dark">
+    <div class="card-body ps-2 pt-1 pb-0">
+        <h2 class="card-title">{{header}}</h2>
+        <p class="small">{{description}}</p>
+        {{#each buttons}}
+        <div class="pb-2">
+            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+{{/with}}
