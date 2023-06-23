@@ -1,50 +1,15 @@
 <main class="p-5">
-    <div class="row g-5">
-        <div class="col-12">
-            <label class="form-label">Email address</label>
-            <input class="form-control form-control-sm">
-            <div class="form-text text-danger">Error. Please enter correct email.</div>
-        </div>
-        <div class="col-12">
-            <label class="form-label">Email address</label>
-            <input disabled type="color" class="form-control">
-            <div class="form-text text-danger">Error. Please enter correct email.</div>
-        </div>
+    <h1>Hello world!</h1>
 
-        <div>
-            <hr>
-        </div>
+    {{> title data="My title"}}
 
-        <div class="col-12">
-            <label class="form-label">Select role</label>
-            <select class="form-select form-select-lg">
-                <option selected>Open list</option>
-                <option value="1">Admin</option>
-                <option value="2">User</option>
-            </select>
-            <div class="form-text text-danger">Error. Please choose correct role.</div>
-        </div>
-
-        <div>
-            <hr>
-        </div>
-
-        <div class="col-12">
-            <div class="form-label pb-2">Select food:</div>
-
-            <div class="form-check form-switch">
-                <label class="form-check-label">Apple</label>
-                <input name="food" type="checkbox" class="form-check-input">
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">Orange</label>
-                <input name="food" type="radio" class="form-check-input">
-            </div>
-            <div class="form-check">
-                <label class="form-check-label">Banana</label>
-                <input name="food" type="checkbox" class="form-check-input">
-            </div>
-        </div>
+    <div style="color: brown;">
+        My textick
     </div>
-    </div>
+
+    <style>
+        h1 {
+            color: green;
+        }
+    </style>
 </main>
