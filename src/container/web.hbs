@@ -1,6 +1,6 @@
-<div>
-    {{#with web}}
-    <main>
+<main class="p-4">
+    <div class="row">
+        {{#with web}}
         <section>
             {{> title data="Programming languages" big=true}}
             {{#each languages}}
@@ -12,91 +12,73 @@
 
             {{#if elements}}
             <div>
-                <div>Elements:</div>
+                <div class="mb-3">Elements:</div>
                 <ol>
                     {{#each elements}}
-                    <li>
+                    <li class="pb-3">
                         <strong>{{name}} - </strong>
                         <em>{{description}}</em>
 
-                        <br>
-                        <br>
-
-                        <div>Attributes:</div>
-                        <br>
+                        <div class="my-3">Attributes:</div>
                         <ul>
                             {{#each attributes}}
-                            <li>
+                            <li class="pb-3">
                                 <b>{{name}} - </b>
                                 <em>{{description}}</em>
                             </li>
-                            <br>
                             {{/each}}
                         </ul>
                     </li>
                     {{/each}}
                 </ol>
             </div>
-
             <hr>
             {{else}}
             {{/if}}
 
             {{#if properties}}
             <div>
-                <div>Properties:</div>
+                <div class="my-3">Properties:</div>
                 <ol>
                     {{#each properties}}
-                    <li>
+                    <li class="pb-3">
                         <strong>{{name}} - </strong>
                         <em>{{description}}</em>
 
-                        <br>
-                        <br>
-
-                        <div>Values:</div>
-                        <br>
+                        <div class="my-3">Values:</div>
                         <ul>
                             {{#each values}}
-                            <li>
+                            <li class="pb-3">
                                 <b>{{value}} - </b>
                                 <em>{{description}}</em>
                             </li>
-                            <br>
                             {{/each}}
                         </ul>
                     </li>
                     {{/each}}
                 </ol>
             </div>
-
             <hr>
             {{else}}
             {{/if}}
 
             {{#if functions}}
             <div>
-                <div>Functions:</div>
+                <div class="my-3">Functions:</div>
                 <ol>
                     {{#each functions}}
-                    <li>
+                    <li class="pb-4">
                         <strong>{{name}} - </strong>
                         <em>{{description}}</em>
 
-                        <br>
-                        <br>
-
-                        <div>Parameters:</div>
-                        <br>
+                        <div class="my-3">Parameters:</div>
                         <ul>
                             {{#each parameters}}
-                            <li>
+                            <li class="pb-3">
                                 <b>{{name}} - </b>
                                 <em>{{description}}</em>
-                                <br>
                                 Type: {{type}}
                             </li>
-                            <br>
                             {{/each}}
                         </ul>
                     </li>
@@ -107,6 +89,6 @@
             {{/if}}
             {{/each}}
         </section>
-    </main>
-    {{/with}}
-</div>
+        {{/with}}
+    </div>
+</main>

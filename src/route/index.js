@@ -41,7 +41,13 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    page: {
+      title: 'Main',
+    },
+
+    layout: 'index',
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -868,7 +874,7 @@ router.get('/mac', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('mac', {
     page: {
-      title: 'Web',
+      title: 'Mac',
     },
 
     layout: 'basic',
@@ -1159,7 +1165,7 @@ router.get('/task31', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     page: {
-      title: 'task31',
+      title: 'Task31',
     },
 
     layout: 'basic',
@@ -1415,7 +1421,7 @@ router.get('/task22', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task22', {
     page: {
-      title: 'task22',
+      title: 'Task22',
     },
 
     layout: 'basic',
@@ -1477,7 +1483,7 @@ router.get('/task21', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task21', {
     page: {
-      title: 'task21',
+      title: 'Task21',
     },
 
     layout: 'basic',
@@ -1552,7 +1558,7 @@ router.get('/shophome', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shophome', {
     page: {
-      title: 'shophome',
+      title: 'Shop Home',
     },
 
     layout: 'shop',
@@ -1844,7 +1850,7 @@ router.get('/shoporder', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shoporder', {
     page: {
-      title: 'shoporder',
+      title: 'Shop Order',
     },
 
     layout: 'shop',
@@ -2214,7 +2220,7 @@ router.get('/shopcart', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
     page: {
-      title: 'shopcart',
+      title: 'Shop Cart',
     },
 
     layout: 'shop',
@@ -2472,7 +2478,7 @@ router.get('/shopprofile', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopprofile', {
     page: {
-      title: 'shopprofile',
+      title: 'Shop Profile',
     },
 
     layout: 'shop',
@@ -2777,7 +2783,7 @@ router.get('/shopreview', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
     page: {
-      title: 'shopreview',
+      title: 'Shop Review',
     },
 
     layout: 'shop',
@@ -3076,7 +3082,7 @@ router.get('/shopcatalog', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcatalog', {
     page: {
-      title: 'shopcatalog',
+      title: 'Shop Catalog',
     },
 
     layout: 'shop',
