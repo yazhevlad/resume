@@ -1,30 +1,31 @@
-<div>
-    <main>
+<main class="p-4">
+    <div class="row">
         <section>
             {{> title data="Car" big=true}}
-            <br>
             <div>
                 <strong>{{make}} {{model}}</strong>
-                <br>
+            </div>
+            <div>
                 Year: {{year}}
-                <br>
+            </div>
+            <div>
                 Color:
                 <span class="badge rounded-pill text-bg-secondary">{{color}}</span>
             </div>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Features"}}
-            <br>
-            <ul>
+            <ul class="mt-4">
                 {{#with features}}
                 <li>
-                    <div><b>Interior:</b></div>
-                    <br>
+                    <div class="mb-3">
+                        <b>Interior:</b>
+                    </div>
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item" style="width: 300px;">
+                        <div class="accordion-item mb-3" style="width: 300px;">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="false"
@@ -37,15 +38,12 @@
                                 <div class="accordion-body">
                                     <ul>
                                         {{#with interior.seats}}
-                                        <li>Material: {{material}}</li>
-                                        <br>
-                                        <li>Color: {{color}}</li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">Material: {{material}}</li>
+                                        <li class="pb-3">Color: {{color}}</li>
+                                        <li class="pb-3">
                                             Heated:
                                             {{> functions data=heated}}
                                         </li>
-                                        <br>
                                         <li>
                                             Ventilated:
                                             {{> functions data=ventilated}}
@@ -56,9 +54,7 @@
                             </div>
                         </div>
 
-                        <br>
-
-                        <div class="accordion-item" style="width: 300px;">
+                        <div class="accordion-item mb-3" style="width: 300px;">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -70,14 +66,11 @@
                                 <div class="accordion-body">
                                     <ul>
                                         {{#with interior.dashboard}}
-                                        <li>Material: {{material}}</li>
-                                        <br>
-                                        <li>Color: {{color}}</li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">Material: {{material}}</li>
+                                        <li class="pb-3">Color: {{color}}</li>
+                                        <li class="pb-3">
                                             Display:
-                                            <br>
-                                            <ul>
+                                            <ul class="mt-3">
                                                 {{#with display}}
                                                 <li>
                                                     Type: {{type}}
@@ -101,8 +94,6 @@
                             </div>
                         </div>
 
-                        <br>
-
                         <div class="accordion-item" style="width: 300px;">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -115,29 +106,24 @@
                                 <div class="accordion-body">
                                     <ul>
                                         {{#with interior.audio}}
-                                        <li>
+                                        <li class="pb-3">
                                             System: {{system}}
                                         </li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">
                                             Speakers: {{speakers}}
                                         </li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">
                                             Subwoofer:
                                             {{> functions data=subwoofer}}
                                         </li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">
                                             Bluetooth:
                                             {{> functions data=bluetooth}}
                                         </li>
-                                        <br>
-                                        <li>
+                                        <li class="pb-3">
                                             USB:
                                             {{> functions data=USB}}
                                         </li>
-                                        <br>
                                         {{/with}}
                                     </ul>
                                 </div>
@@ -146,71 +132,57 @@
                     </div>
                 </li>
 
-                <br>
-
-                <li>
-                    <div><b>Exterior:</b></div>
-                    <br>
-                    <button type="button" class="btn btn-warning">Wheels:</button>
-                    <br>
-                    <br>
+                <li class="py-3">
+                    <div class="mb-3">
+                        <b>Exterior:</b>
+                    </div>
+                    <div class="mb-3">
+                        <button type="button" class="btn btn-warning">Wheels:</button>
+                    </div>
                     <ul>
                         {{#with exterior.wheels}}
-                        <li>Size: {{size}}</li>
-                        <br>
-                        <li>Type: {{type}}</li>
-                        <br>
-                        <li>Color: {{color}}</li>
-                        <br>
+                        <li class="pb-3">Size: {{size}}</li>
+                        <li class="pb-3">Type: {{type}}</li>
+                        <li class="pb-3">Color: {{color}}</li>
                         {{/with}}
                     </ul>
 
-                    <br>
+                    <div class="my-3">
+                        <button type="button" class="btn btn-info">Headlights:</button>
+                    </div>
 
-                    <button type="button" class="btn btn-info">Headlights:</button>
-                    <br>
-                    <br>
                     <ul>
                         {{#with exterior.headlights}}
-                        <li>Type: {{type}}</li>
-                        <br>
-                        <li>Brightness: {{brightness}}</li>
-                        <br>
-                        <li>
+                        <li class="pb-3">Type: {{type}}</li>
+                        <li class="pb-3">Brightness: {{brightness}}</li>
+                        <li class="pb-3">
                             Automatic:
                             {{> functions data=automatic}}
                         </li>
-                        <br>
                         {{/with}}
                     </ul>
 
-                    <br>
+                    <div class="my-3">
+                        <button type="button" class="btn btn-success">Sunroof:</button>
+                    </div>
 
-                    <button type="button" class="btn btn-success">Sunroof:</button>
-                    <br>
-                    <br>
                     <ul>
                         {{#with exterior.sunroof}}
-                        <li>Type: {{type}}</li>
-                        <br>
-                        <li>Size: {{size}}</li>
-                        <br>
-                        <li>
+                        <li class="pb-3">Type: {{type}}</li>
+                        <li class="pb-3">Size: {{size}}</li>
+                        <li class="pb-3">
                             Automatic:
                             {{> functions data=automatic}}
                         </li>
-                        <br>
                         {{/with}}
                     </ul>
                 </li>
 
-                <br>
-
                 <li>
-                    <div><b>Safety:</b></div>
-                    <br>
-                    <div>Airbags:</div>
-                    <br>
+                    <div class="mb-3">
+                        <b>Safety:</b>
+                    </div>
+                    <div class="mb-3">Airbags:</div>
                     <ul class="list-group list-group-horizontal" style="width: 500px;">
                         {{#with safety.airbags}}
                         <li class="list-group-item">Front: {{front}}</li>
@@ -220,10 +192,7 @@
                         {{/with}}
                     </ul>
 
-                    <br>
-
-                    <div>Assistance:</div>
-                    <br>
+                    <div class="mt-4 mb-3">Assistance:</div>
                     <ol class="list-group list-group-numbered" style="width: 330px;">
                         {{#with safety.assistance}}
                         <li class="list-group-item">
@@ -253,38 +222,31 @@
             {{/with}}
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Engine"}}
-            <br>
-            <div>
+            <div class="mt-4">
                 <ul>
                     {{#with engine}}
-                    <li>
+                    <li class="pb-3">
                         Type:
                         <span class="badge rounded-pill text-bg-warning">{{type}}</span>
                     </li>
-                    <br>
-                    <li>
+                    <li class="pb-3">
                         Displacement: {{displacement}}
                     </li>
-                    <br>
-                    <li>
+                    <li class="pb-3">
                         Horsepower: {{horsepower}}
                     </li>
-                    <br>
-                    <li>
+                    <li class="pb-3">
                         Torque: {{torque}}
                     </li>
-                    <br>
                     <li>
-                        Transmission:
-                        <br>
-                        <br>
+                        <div class="mb-2">Transmission:</div>
                         <ul>
                             {{#with transmission}}
-                            <li>
+                            <li class="pb-2">
                                 <span class="badge rounded-pill text-bg-info">{{type}}</span>
                             </li>
                             <li>
@@ -298,11 +260,10 @@
             </div>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Fuel economy"}}
-            <br>
             <ul class="list-group list-group-horizontal">
                 <li class="list-group-item" style="width: 100px;">City</li>
                 <li class="list-group-item" style="width: 100px;">Highway</li>
@@ -317,32 +278,24 @@
             </ul>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Price"}}
-            <br>
             <ul>
                 {{#with price}}
-                <li>Base: ${{base}}</li>
-                <br>
-                <li>Destination: ${{destination}}</li>
-                <br>
-                <li>
-                    Options:
-                    <br>
-                    <br>
+                <li class="pb-3">Base: ${{base}}</li>
+                <li class="pb-3">Destination: ${{destination}}</li>
+                <li class="pb-3">
+                    <div class="mb-2">Options:</div>
                     <ol>
                         {{#with options}}
-                        <li>Navigation: ${{navigation}}</li>
-                        <br>
-                        <li>Moonroof: ${{moonroof}}</li>
-                        <br>
+                        <li class="pb-3">Navigation: ${{navigation}}</li>
+                        <li class="pb-3">Moonroof: ${{moonroof}}</li>
                         <li>Premium paint: ${{premium_paint}}</li>
                         {{/with}}
                     </ol>
                 </li>
-                <br>
                 <li>
                     <p>
                         <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -353,8 +306,8 @@
                     </p>
                     <div style="min-height: 120px;">
                         <div class="collapse collapse-horizontal" id="collapseWidthExample">
-                            <div class="card card-body" style="width: 300px;">
-                                ${{total}}
+                            <div class="card card-body" style="width: 150px;">
+                                <h4 class="text-center m-2">${{total}}</h4>
                             </div>
                         </div>
                     </div>
@@ -362,5 +315,5 @@
                 {{/with}}
             </ul>
         </section>
-    </main>
-</div>
+    </div>
+</main>

@@ -3,7 +3,7 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="p-4">
     {{#with main}}
     <main>
         <section>
@@ -12,11 +12,9 @@
                 <ul>
                     {{#each works}}
                     <li>
-                        <div>{{position}}</div>
+                        <div class="mb-3">{{position}}</div>
 
-                        <br>
-
-                        <div>
+                        <div class="mb-3">
                             {{duration.from}} -
                             {{#if duration.to}}
                             {{duration.to}}
@@ -25,9 +23,7 @@
                             {{/if}}
                         </div>
 
-                        <br>
-
-                        <div>
+                        <div class="mb-4">
                             {{#if company.url}}
                             {{> link text=company.name href=company.url blank=true noLine=true}}
                             {{else}}
@@ -35,37 +31,26 @@
                             {{/if}}
                         </div>
 
-                        <br>
-                        <br>
-
-                        <div>
+                        <div class="mb-3">
                             <strong>Projects: {{projectAmount}}</strong>
                         </div>
-
-                        <br>
 
                         <ul>
                             {{#each projects}}
                             <li>
-                                <div>
+                                <div class="mb-3">
                                     {{> link text=name href=url blank=true noLine=true}}
                                 </div>
 
-                                <br>
-
-                                <div>
+                                <div class="mb-4">
                                     <p>{{about}}</p>
                                 </div>
 
-                                <br>
-
-                                <div>
+                                <div class="mb-3">
                                     <em>Project stacks ({{stackAmount}}):</em>
                                 </div>
 
-                                <br>
-
-                                <div>
+                                <div class="mb-4">
                                     <ul>
                                         {{#each stacks}}
                                         <li>{{name}}</li>
@@ -73,13 +58,9 @@
                                     </ul>
                                 </div>
 
-                                <br>
-
-                                <div>
+                                <div class="mb-3">
                                     <em>Project awards ({{awardAmount}}):</em>
                                 </div>
-
-                                <br>
 
                                 <div>
                                     <ul>
@@ -92,7 +73,6 @@
                             {{/each}}
                         </ul>
                     </li>
-                    <br>
                     {{/each}}
                 </ul>
             </div>

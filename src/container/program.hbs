@@ -1,63 +1,55 @@
-<div>
-    {{#with program.excursion}}
-    <main>
+<main class="p-4">
+    <div class="row">
+        {{#with program.excursion}}
         <section>
             {{> title data=name big=true}}
-            <div>
+            <div class="mb-2">
                 Location:
                 {{location.city}}, {{location.country}}
             </div>
-            <br>
             <div>Date: {{date}}</div>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Program"}}
             <ol>
                 {{#each program}}
                 <li>
-                    <div>
+                    <div class="mb-2">
                         {{name}} - <b>{{type}}</b>
                     </div>
-                    <br>
-                    <div>Duration: {{duration}} hours</div>
-                    <br>
+                    <div class="mb-2">Duration: {{duration}} hours</div>
 
                     {{#with details}}
                     {{> place data=museum}}
                     {{> place data=venue}}
-                    <br>
 
                     {{#if performers}}
-                    <div>
+                    <div class="mb-3">
                         <ul>
                             <li>
-                                <div>Performers:</div>
-                                <br>
+                                <div class="mb-2">Performers:</div>
                                 <ul>
                                     {{#each performers}}
-                                    <li>
+                                    <li class="mb-2">
                                         {{name}} - <b>{{type}}</b>
-                                        <br>
                                     </li>
                                     {{/each}}
                                 </ul>
                             </li>
                         </ul>
                     </div>
-                    <br>
                     {{else}}
                     {{/if}}
 
                     {{> guide}}
                     {{/with}}
-                    <br>
                 </li>
                 {{/each}}
             </ol>
         </section>
-    </main>
-    {{/with}}
-</div>
+        {{/with}}
+    </div>
+</main>

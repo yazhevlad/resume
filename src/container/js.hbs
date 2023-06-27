@@ -1,42 +1,38 @@
-<div>
-    <main>
+<main class="p-4">
+    <div class="row">
         <section>
             {{> title data=name big=true}}
-            <div>
+            <div class="mb-3">
                 <em>{{description}}</em>
             </div>
-            <br>
-            <div>
+            <div class="mb-2 small">
                 Created in {{history.year}}
             </div>
-            <br>
-            <div>
+            <div class="small">
                 Founder: {{history.founder}}
             </div>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
-            <div>Types:</div>
-            <br>
+            <h5 class="mb-3">Types:</h5>
             <ul>
                 {{#each types}}
-                <li>
+                <li class="pb-2">
                     <span class="badge text-bg-success">{{this}}</span>
                 </li>
                 {{/each}}
             </ul>
         </section>
 
-        <hr>
+        <hr class="mt-2 mb-4">
 
         <section>
-            <div>Syntax:</div>
-            <br>
+            <h5 class="mb-3">Syntax:</h5>
             {{#with syntax}}
             <ol>
-                <li>
+                <li class="pb-3">
                     <p>
                         <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
@@ -46,9 +42,7 @@
                     {{> syntax data=variables}}
                 </li>
 
-                <br>
-
-                <li>
+                <li class="pb-3">
                     <p>
                         <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
@@ -58,9 +52,7 @@
                     {{> syntax data=functions}}
                 </li>
 
-                <br>
-
-                <li>
+                <li class="pb-3">
                     <p>
                         <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
@@ -70,9 +62,7 @@
                     {{> syntax data=conditionals}}
                 </li>
 
-                <br>
-
-                <li>
+                <li class="pb-3">
                     <p>
                         <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button"
                             aria-expanded="false" aria-controls="collapseExample">
@@ -81,8 +71,6 @@
                     </p>
                     {{> syntax data=loops}}
                 </li>
-
-                <br>
 
                 <li>
                     <p>
@@ -97,23 +85,21 @@
             {{/with}}
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
-            <div>Features:</div>
-            <br>
+            <h5 class="mb-3">Features:</h5>
             <ul class="list-group">
                 {{#each features}}
-                <li href="#" class="list-group-item list-group-item-action">{{this}}</li>
+                <li class="list-group-item list-group-item-action">{{this}}</li>
                 {{/each}}
             </ul>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
-            <div>Libraries:</div>
-            <br>
+            <h5 class="mb-3">Libraries:</h5>
             <ul class="list-group list-group-horizontal">
                 {{#each libraries}}
                 <li class="list-group-item">{{this}}</li>
@@ -121,11 +107,10 @@
             </ul>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
-            <div>Tools:</div>
-            <br>
+            <h5 class="mb-3">Tools:</h5>
             <ul class="list-group list-group-horizontal">
                 {{#each tools}}
                 <li class="list-group-item list-group-item-primary">{{this}}</li>
@@ -133,11 +118,10 @@
             </ul>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
-            <div>Community:</div>
-            <br>
+            <h5 class="mb-3">Community:</h5>
             <ul class="nav flex-column">
                 {{#each community}}
                 <li class="nav-item">
@@ -146,5 +130,5 @@
                 {{/each}}
             </ul>
         </section>
-    </main>
-</div>
+    </div>
+</main>

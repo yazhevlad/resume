@@ -1,32 +1,28 @@
-<div>
-    <main>
+<main class="p-4">
+    <div class="row">
         <section>
             {{> title data=name big=true}}
-            <br>
             <div>
                 <p>
                     <em>{{description}}</em>
                 </p>
             </div>
-            <br>
-            <div>
+            <div class="mb-3">
                 Price: ${{price}}
             </div>
-            <br>
-            <div>
+            <div class="small">
                 Category: {{category}}
             </div>
         </section>
 
-        <hr>
+        <hr class="my-4">
 
         <section>
             {{> title data="Features"}}
-            <br>
             {{#with features}}
-            <ul>
+            <ul class="mt-4">
                 {{#with processor}}
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-info mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Processor</b>
@@ -45,17 +41,14 @@
                 </li>
                 {{/with}}
 
-                <br>
-
-
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-dark mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Memory & Storage</b>
                         </div>
                         <div class="card-body">
                             <b class="card-title">Memory:</b>
-                            <div class="card-text">
+                            <div class="card-text mb-3">
                                 <ul>
                                     {{#with memory}}
                                     <li>{{type}}</li>
@@ -64,7 +57,6 @@
                                     {{/with}}
                                 </ul>
                             </div>
-                            <br>
                             <b class="card-title">Storage:</b>
                             <div class="card-text">
                                 <ul>
@@ -78,10 +70,8 @@
                     </div>
                 </li>
 
-                <br>
-
                 {{#with display}}
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-success mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Display</b>
@@ -102,10 +92,8 @@
                 </li>
                 {{/with}}
 
-                <br>
-
                 {{#with graphics}}
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-warning mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Graphics</b>
@@ -122,16 +110,12 @@
                 </li>
                 {{/with}}
 
-                <br>
-
-                <li>
+                <li class="pb-3">
                     {{> ports}}
                 </li>
 
-                <br>
-
                 {{#with battery}}
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-danger mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Battery</b>
@@ -149,21 +133,18 @@
                 </li>
                 {{/with}}
 
-                <br>
-
-                <li>
+                <li class="pb-3">
                     <div class="card text-bg-primary mb-3" style="max-width: 20rem;">
                         <div class="card-header">
                             <b>Weight & Dimensions</b>
                         </div>
                         <div class="card-body">
                             <b class="card-title">Weight:</b>
-                            <div class="card-text">
+                            <div class="card-text mb-3">
                                 <ul>
                                     <li>{{weight}}</li>
                                 </ul>
                             </div>
-                            <br>
                             <b class="card-title">Dimensions:</b>
                             <div class="card-text">
                                 <ul>
@@ -177,8 +158,6 @@
                         </div>
                     </div>
                 </li>
-
-                <br>
 
                 <li>
                     <div class="card text-bg-light mb-3" style="max-width: 20rem;">
@@ -198,21 +177,19 @@
             {{/with}}
         </section>
 
-        <hr>
+        <hr class="my-5">
 
         <section>
             {{> title data="Accessories"}}
-            <br>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group list-group-flush mt-3">
                 {{#each features.accessories}}
-                <li class="list-group-item">
+                <li class="list-group-item pb-3">
                     {{name}} -
                     <b>${{price}}</b> -
                     <button type="button" class="btn btn-success">Buy</button>
                 </li>
-                <br>
                 {{/each}}
             </ul>
         </section>
-    </main>
-</div>
+    </div>
+</main>

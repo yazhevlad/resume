@@ -1,13 +1,14 @@
-<div>
+<div class="mb-3">
     {{name}} - <b>{{data}}</b>
+
+
+    {{#if department}}
+    <div>{{department}}</div>
+    {{else}}
+    {{/if}}
+
+    {{#if email}}
+    <div>{{email}}</div>
+    {{else}}
+    {{/if}}
 </div>
-
-{{#if department}}
-<div>{{department}}</div>
-{{else}}
-{{/if}}
-
-{{#if email}}
-<div>{{email}}</div>
-{{else}}
-{{/if}}

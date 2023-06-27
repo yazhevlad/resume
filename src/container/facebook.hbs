@@ -1,8 +1,7 @@
-<div>
-    <main>
+<main class="p-4">
+    <div class="row">
         <section>
             {{> title data=name big=true}}
-            <br>
             <div class="card" style="width: 20rem;">
                 <div class="card-body">
                     <h5 class="card-title">{{users.[0].name}}</h5>
@@ -13,7 +12,7 @@
                     </p>
 
                     <div class="accordion" id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item">
+                        <div class="accordion-item mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
@@ -30,22 +29,19 @@
                                             <div>
                                                 <b>Mutual friends:</b>
                                             </div>
-                                            <ul>
+                                            <ul class="mb-3">
                                                 {{#each mutual_friends}}
                                                 <li>
                                                     {{> perinfo}}
                                                 </li>
                                                 {{/each}}
                                             </ul>
-                                            <br>
                                         </li>
                                         {{/each}}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <br>
 
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -61,22 +57,20 @@
                                         {{#each users.[0].groups}}
                                         <li>
                                             <div>"{{name}}"</div>
-                                            <div>ID: {{id}}</div>
-                                            <br>
+                                            <div class="mb-3">ID: {{id}}</div>
                                             <p>
                                                 <em>{{description}}</em>
                                             </p>
                                             <div>
                                                 <b>Members:</b>
                                             </div>
-                                            <ul>
+                                            <ul class="mb-3">
                                                 {{#each members}}
                                                 <li>
                                                     {{> perinfo}}
                                                 </li>
                                                 {{/each}}
                                             </ul>
-                                            <br>
                                         </li>
                                         {{/each}}
                                     </ol>
@@ -88,9 +82,7 @@
             </div>
         </section>
 
-        <br>
-        <hr>
-        <br>
+        <hr class="my-5">
 
         <section>
             <div class="card" style="width: 20rem;">
@@ -103,7 +95,7 @@
                     </p>
 
                     <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
+                        <div class="accordion-item mb-3">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseOne" aria-expanded="false"
@@ -121,22 +113,19 @@
                                             <div>
                                                 <b>Mutual friends:</b>
                                             </div>
-                                            <ul>
+                                            <ul class="mb-3">
                                                 {{#each mutual_friends}}
                                                 <li>
                                                     {{> perinfo}}
                                                 </li>
                                                 {{/each}}
                                             </ul>
-                                            <br>
                                         </li>
                                         {{/each}}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-
-                        <br>
 
                         <div class="accordion-item">
                             <h2 class="accordion-header">
@@ -154,22 +143,20 @@
                                         {{#each groups}}
                                         <li>
                                             <div>"{{name}}"</div>
-                                            <div>ID: {{id}}</div>
-                                            <br>
+                                            <div class="mb-3">ID: {{id}}</div>
                                             <p>
                                                 <em>{{description}}</em>
                                             </p>
                                             <div>
                                                 <b>Members:</b>
                                             </div>
-                                            <ul>
+                                            <ul class="mb-3">
                                                 {{#each members}}
                                                 <li>
                                                     {{> perinfo}}
                                                 </li>
                                                 {{/each}}
                                             </ul>
-                                            <br>
                                         </li>
                                         {{/each}}
                                     </ul>
@@ -181,5 +168,5 @@
                 </div>
             </div>
         </section>
-    </main>
-</div>
+    </div>
+</main>

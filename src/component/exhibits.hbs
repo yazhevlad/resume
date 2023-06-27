@@ -1,6 +1,5 @@
 <div>
-    <div>Exhibits:</div>
-    <br>
+    <div class="mb-3">Exhibits:</div>
     <ul>
         {{#each exhibits}}
         <li>
@@ -17,14 +16,13 @@
                 <p><em>{{description}}</em></p>
             </div>
 
-            <div>
+            <div class="mb-3">
                 {{#if audio_guide includeZero=true}}
                 (<b>Audio guide is avaliable</b>)
                 {{else}}
                 (<b>Audio guide is not avaliable</b>)
                 {{/if}}
             </div>
-            <br>
         </li>
         {{/each}}
     </ul>
